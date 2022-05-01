@@ -1,2 +1,3 @@
 sandbox.config.json/* linguist-vendored
 *.json linguist-detectable=true
+*.css linguist-detectable=true
