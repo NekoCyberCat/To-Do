@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+      body {
+        background: rgb(111, 223, 223);
+        background: radial-gradient(
+          circle,
+          rgba(111, 223, 223, 1) 0%,
+          rgba(85, 52, 165, 1) 100%
+        );
+
+        display: flex;
+        justify-content: center;
+        margin-top: 315px;
+      }
+
+      .board {
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 320px;
+        margin: 4px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h3 {
+        background-color: #7659be;
+        color: white;
+        margin: 0;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 400;
+        font-family: "Lobster", cursive;
+      }
+
+      p {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .add-card::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+
+      .add-card:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      .add-card::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        inset: 0 0 0 0;
+        background-color: rgb(0, 255, 191);
+        z-index: -1;
+        transition: transform 0.3s ease;
+        border-radius: 5px 10px;
+      }
+
+      .add-card {
+        background: rgba(120, 120, 120, 0.2);
+        font-family: "Roboto", sans-serif;
+        margin: 4px;
+        border-radius: 5px 10px;
+        position: relative;
+        font-size: 5rem;
+      }
+
+      .add-card:hover {
+        cursor: pointer;
+      }
+
+      .add-card p {
+        font-size: 16px;
+        padding-left: 10px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      ul {
+        list-style-type: none;
+        min-height: 300px;
+        padding: 2px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
+
+      li {
+        background-color: white;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 4px 10px;
+        min-width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin: 4px 10px;
+        padding: 8px;
+        align-items: center;
+      }
+
+      li:hover {
+        cursor: move;
+      }
+
+      .remove {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 12px;
+        transition: 0.3s;
+        color: gray;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .remove:hover {
+        cursor: pointer;
+        background-color: rgb(247, 186, 186);
+      }
